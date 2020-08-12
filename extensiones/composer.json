@@ -1,0 +1,7 @@
+{
+    "require": {
+        "mercadopago/dx-php": "dev-master",
+        "phpmailer/phpmailer": "^6.0",
+        "google/apiclient": "^2.0"
+    }
+}
