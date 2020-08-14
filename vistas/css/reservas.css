@@ -1,0 +1,49 @@
+/*=============================================
+INFO-RESERVAS
+=============================================*/
+
+.infoReservas{
+	position: relative;
+	margin-top:-20px;
+}
+
+.infoReservas .colIzqReservas{
+	position:relative;
+	margin-top:-170px;
+}
+
+
+.colIzqReservas button{
+	border-radius:0;
+	background:black;
+	color:white;
+}
+
+.colDerReservas{
+	transition:0.3s all;
+}
+
+/*=============================================
+TABLET VERTICAL (MD revisamos en 768px hacia abajo)
+=============================================*/
+
+@media (max-width:768px){
+
+	.infoReservas .colIzqReservas .cabeceraReservas{
+		background: black;
+	}
+
+	.infoReservas .colIzqReservas .cabeceraReservas h1{
+		font-size:20px;
+	}
+
+	.infoReservas .colIzqReservas .calendarioReservas h1{
+		font-size:16px;
+	}
+
+	.infoReservas .colIzqReservas .calendarioReservas ul li{
+		font-size:14px;
+	}
+	
+
+}

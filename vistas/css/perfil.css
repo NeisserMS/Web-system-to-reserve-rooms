@@ -1,0 +1,93 @@
+/*=============================================
+INFO-PERFIL
+=============================================*/
+
+.infoPerfil{
+	position: relative;
+	margin-top:-80px;
+}
+
+.infoPerfil .colIzqPerfil{
+	position:relative;
+	margin-top:-170px;
+}
+
+.colIzqPerfil .descripcionPerfil{
+	border-right:1px solid #eee;
+}
+
+.colIzqPerfil .descripcionPerfil .imgPerfil{
+	position:relative;
+	width:120px;
+	height:120px;
+	border-radius:100%;
+	overflow:hidden;
+	left:50%;
+	transform:translate(-50%,0);
+}
+
+.colIzqPerfil .descripcionPerfil .card-header a{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 100;
+	color:#777;
+	font-size:22px;
+	line-height:40px;
+}
+
+.colIzqPerfil .descripcionPerfil ul.card-body{
+	height: 125px !important;
+}
+
+.colIzqPerfil .descripcionPerfil .card ul li.misReservas{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 100;
+	color:#777;
+	font-size:18px;
+	line-height:70px;
+	border-top:1px solid #eee;
+}
+
+.colDerPerfil{
+	transition:0.3s all;
+}
+
+.colDerPerfil thead{
+	background-color: #197DB1;
+	line-height:50px;
+	color:white;
+}
+
+.colDerPerfil thead tr th{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 100;
+}
+
+.table-striped tbody tr:nth-of-type(odd){
+	background-color: #EBF8F9 !important;
+}
+
+.colDerPerfil tbody tr td button{
+	border-radius:100%;
+}
+
+/*=============================================
+TABLET VERTICAL (MD revisamos en 768px hacia abajo)
+=============================================*/
+
+@media (max-width:768px){
+
+	
+	.infoPerfil .colIzqPerfil .cabeceraPerfil{
+		background: black;
+	}
+
+	.table-striped{
+		display:none;
+	}
+
+	.colIzqPerfil .d-flex button{
+		border-radius:100%;
+	}
+
+
+}

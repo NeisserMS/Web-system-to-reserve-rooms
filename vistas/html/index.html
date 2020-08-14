@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+
+	<title>Hotel Portobelo</title>
+
+	<link rel="icon" href="img/icono.jpg">
+
+	<!--=====================================
+	VÍNCULOS CSS
+	======================================-->
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+	<!-- Fuente Open Sans y Ubuntu -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Ubuntu" rel="stylesheet">
+
+	<!-- bootstrap datepicker -->
+	<link rel="stylesheet" href="css/plugins/bootstrap-datepicker.standalone.min.css">
+
+	<!-- jdSlider -->
+	<link rel="stylesheet" href="css/plugins/jquery.jdSlider.css">
+
+	<!-- Pano -->
+	<link rel="stylesheet" href="css/plugins/jquery.pano.css">
+
+	 <!-- fullCalendar -->
+	<link rel="stylesheet" href="css/plugins/fullcalendar.min.css">
+
+	<!-- Hoja de estilo personalizada -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!--=====================================
+	VÍNCULOS JAVASCRIPT
+	======================================-->
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+	<!-- bootstrap datepicker -->
+	<!-- https://bootstrap-datepicker.readthedocs.io/en/latest/ -->
+	<script src="js/plugins/bootstrap-datepicker.min.js"></script>
+
+	<!-- https://easings.net/es# -->
+	<script src="js/plugins/jquery.easing.js"></script>
+
+	<!-- https://markgoodyear.com/labs/scrollup/ -->
+	<script src="js/plugins/scrollUP.js"></script>
+
+	<!-- jdSlider -->
+	<!-- https://www.jqueryscript.net/slider/Carousel-Slideshow-jdSlider.html -->
+	<script src="js/plugins/jquery.jdSlider-latest.js"></script>
+
+	<!-- Pano -->
+	<!-- https://www.jqueryscript.net/other/360-Degree-Panoramic-Image-Viewer-with-jQuery-Pano.html -->
+	<script src="js/plugins/jquery.pano.js"></script>
+
+	<!-- fullCalendar -->
+	<!-- https://momentjs.com/ -->
+	<script src="js/plugins/moment.js"></script>
+	<!-- https://fullcalendar.io/docs/background-events-demo -->	
+	<script src="js/plugins/fullcalendar.min.js"></script>
+
+
+</head>
+<body>
+
+<!--=====================================
+HEADER
+======================================-->
+
+<header class="container-fluid p-0 bg-white">
+	
+	<div class="container p-0">
+		
+		<div class="grid-container py-2">
+
+			<!-- LOGO -->
+			
+			<div class="grid-item">
+
+				<a href="index.html">
+				
+					<img src="img/logoPortobelo.png" class="img-fluid">
+
+				</a>
+
+			</div>
+
+			<div class="grid-item d-none d-lg-block"></div>
+
+			<!-- CAMPANA Y RESERVA -->
+
+			<div class="grid-item d-none d-lg-block bloqueReservas">
+				
+				<div class="py-2 campana-y-reserva mostrarBloqueReservas" modo="abajo">
+
+					<i class="fas fa-concierge-bell lead mx-2"></i>
+
+					<i class="fas fa-caret-up lead mx-2 flechaReserva"></i>
+
+				</div>	
+
+				<!--=====================================
+				FORMULARIO DE RESERVAS
+				======================================-->
+
+				<div class="formReservas py-1 py-lg-2 px-4">
+					
+					<div class="form-group my-4">
+						<select class="form-control form-control-lg">
+							<option>Tipo de habitación</option>
+							<option>Suite</option>
+							<option>Especial</option>
+							<option>Standar</option>
+						</select>
+					</div>
+
+					<div class="form-group my-4">
+						<select class="form-control form-control-lg">
+							<option>Temática de habitación</option>
+							<option>Oriental</option>
+							<option>Contemporánea</option>
+							<option>Africana</option>
+							<option>Clásica</option>
+							<option>Retro</option>
+						</select>
+					</div>
+
+					<div class="row">
+						
+						 <div class="col-6 input-group input-group-lg pr-1">
+						
+							<input type="text" class="form-control datepicker entrada" placeholder="Entrada">
+
+							<div class="input-group-append">
+								
+								<span class="input-group-text p-2">
+									<i class="far fa-calendar-alt small text-gray-dark"></i>
+								</span>
+							
+							</div>
+
+						</div>
+
+						<div class="col-6 input-group input-group-lg pl-1">
+						
+							<input type="text" class="form-control datepicker salida" placeholder="Salida">
+
+							<div class="input-group-append">
+								
+								<span class="input-group-text p-2">
+									<i class="far fa-calendar-alt small text-gray-dark"></i>
+								</span>
+							
+							</div>
+
+						</div>
+
+					</div>
+
+					<input type="button" class="btn btn-block btn-lg my-4 text-white" value="Ver disponibilidad">
+					
+
+				</div>
+
+			</div>
+
+			<!-- INGRESO DE USUARIOS -->
+
+			<div class="grid-item d-none d-lg-block mt-2">
+
+				<a href="#modalIngreso" data-toggle="modal"><i class="fas fa-user"></i></a>
+
+			</div>
+
+			<!-- SELECCIÓN DE IDIOMA -->
+
+			<div class="grid-item d-none d-lg-block mt-1 idiomas">
+				
+				<span class="border border-info float-left p-1 bg-info text-white idiomaEs">ES</span>
+
+				<span class="border border-info float-left p-1 bg-white text-dark idiomaEn">EN</span>
+
+			</div>
+
+			<!-- MENÚ HAMBURGUESA -->
+
+			<div class="grid-item mt-1 mt-sm-3 mt-md-4 mt-lg-2 botonMenu">
+				
+				<i class="fas fa-bars lead"></i>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</header>
+
+<!--=====================================
+MENÚ
+======================================-->
+
+<nav class="menu container-fluid p-0">
+	
+	<ul class="nav nav-justified py-2">
+		
+		<li class="nav-item">
+			<a class="nav-link text-white" href="#planes">Planes</a>
+		</li>
+
+		<li class="nav-item">
+			<a class="nav-link text-white" href="#habitaciones">Habitaciones</a>
+		</li>
+
+		<li class="nav-item">
+			<a class="nav-link text-white" href="#pueblo">El pueblo</a>
+		</li>
+
+		<li class="nav-item">
+			<a class="nav-link text-white" href="#restaurante">Restaurante</a>
+		</li>
+
+		<li class="nav-item">
+			<a class="nav-link text-white" href="#contactenos">Contáctenos</a>
+		</li>
+
+		<li class="nav-item">
+			
+			<ul class="my-2 py-1">
+				
+				<li>
+					<a href="#" target="_blank">
+						<i class="fab fa-facebook-f text-white float-left mx-2"></i>
+					</a>
+				</li>
+
+				<li>
+					<a href="#" target="_blank">
+						<i class="fab fa-twitter text-white float-left mx-2"></i>
+					</a>
+				</li>
+
+				<li>
+					<a href="#" target="_blank">
+						<i class="fab fa-youtube text-white float-left mx-2"></i>
+					</a>
+				</li>
+
+				<li>
+					<a href="#" target="_blank">
+						<i class="fab fa-instagram text-white float-left mx-2"></i>
+					</a>
+				</li>
+
+			</ul>
+			
+		</li>
+
+	</ul>
+
+
+</nav>
+
+<!--=====================================
+MENÚ MÓVIL
+======================================-->
+<div class="menuMovil">
+	
+	<div class="row">
+		
+		<div class="col-6">
+			
+			<a href="#modalIngreso" data-toggle="modal">
+				<i class="fas fa-user lead ml-3 mt-4"></i>
+			</a>
+
+		</div>	
+
+		<div class="col-6">
+			
+			<div class="float-right mr-3 mt-3 mr-sm-5 mt-sm-4">
+				
+				<span class="border border-info float-left p-1 bg-info text-white idiomaEs">ES</span>
+				<span class="border border-info float-left p-1 bg-white text-dark idiomaEn">EN</span>
+
+			</div>	
+
+		</div>	
+
+	</div>
+
+	<div class="formReservas py-1 py-lg-2 px-4">
+					
+		<div class="form-group my-4">
+			<select class="form-control form-control-lg">
+				<option>Tipo de habitación</option>
+				<option>Suite</option>
+				<option>Especial</option>
+				<option>Standar</option>
+			</select>
+		</div>
+
+		<div class="form-group my-4">
+			<select class="form-control form-control-lg">
+				<option>Temática de habitación</option>
+				<option>Oriental</option>
+				<option>Contemporánea</option>
+				<option>Africana</option>
+				<option>Clásica</option>
+				<option>Retro</option>
+			</select>
+		</div>
+
+		<div class="row">
+			
+			 <div class="col-6 input-group input-group-lg pr-1">
+			
+				<input type="text" class="form-control datepicker entrada" placeholder="Entrada">
+
+				<div class="input-group-append">
+					
+					<span class="input-group-text p-2">
+						<i class="far fa-calendar-alt small text-gray-dark"></i>
+					</span>
+				
+				</div>
+
+			</div>
+
+			<div class="col-6 input-group input-group-lg pl-1">
+			
+				<input type="text" class="form-control datepicker salida" placeholder="Salida">
+
+				<div class="input-group-append">
+					
+					<span class="input-group-text p-2">
+						<i class="far fa-calendar-alt small text-gray-dark"></i>
+					</span>
+				
+				</div>
+
+			</div>
+
+		</div>
+
+		<input type="button" class="btn btn-block btn-lg my-4 text-white" value="Ver disponibilidad">
+		
+	</div>
+
+	<ul class="nav flex-column mt-4 pl-4 mb-5">
+		
+		<li class="nav-item">
+			<a class="nav-link text-white my-2" href="#planesMovil">Planes</a>
+		</li>
+
+		<li class="nav-item">
+			<a class="nav-link text-white my-2" href="#habitaciones">Habitaciones</a>
+		</li>
+
+		<li class="nav-item">
+			<a class="nav-link text-white my-2" href="#pueblo">Recorrido por el pueblo</a>
+		</li>
+
+		<li class="nav-item">
+			<a class="nav-link text-white my-2" href="#restaurante">Restaurante</a>
+		</li>
+
+		<li class="nav-item">
+			<a class="nav-link text-white my-2" href="#contactenos">Contáctenos</a>
+		</li>
+
+	</ul>
+
+</div>
+
+<!--=====================================
+BANNER
+======================================-->
+
+<div class="banner container-fluid p-0">
+	
+	<div class="jd-slider fade-slider">
+		
+		<div class="slide-inner">
+			
+			<ul class="slide-area">
+				
+				 <li>					
+                    <img src="img/banner01.jpg" width="100%">
+                </li>
+
+                <li>              	
+                    <img src="img/banner02.jpg" width="100%">
+                </li>
+
+                <li>               	
+                    <img src="img/banner03.jpg" width="100%">
+                </li>
+
+                <li>               	
+                    <img src="img/banner04.jpg" width="100%">
+                </li>
+
+			</ul>
+
+		</div>
+
+	 	<div class="controller d-none">
+		 	
+			<a class="auto" href="#">
+
+                <i class="fas fa-play fa-xs"></i>
+                <i class="fas fa-pause fa-xs"></i>
+
+            </a>
+
+            <div class="indicate-area"></div>
+
+	 	</div>
+
+	 	<div class="verMas text-center bg-white rounded-circle d-none d-lg-block" vinculo="#planes">
+    
+    		<i class="fas fa-chevron-down"></i>	
+
+    	</div>
+
+	</div>
+
+</div>
+
+<!--=====================================
+PLANES
+======================================-->
+
+<div class="planes container-fluid bg-white p-0" id="planes">
+	
+	<div class="container p-0">
+		
+		<div class="grid-container">
+			
+			<div class="grid-item">
+				
+				<h1 class="text-center py-3 py-lg-5 tituloPlan" tituloPlan="BIENVENIDO">BIENVENIDO</h1>
+
+				<p class="text-muted text-left px-4 descripcionPlan" descripcionPlan="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure deleniti quidem minus voluptatibus repellendus error, excepturi quam, iste vitae tenetur fugiat possimus in. In iure cum facilis, saepe, libero accusantium.">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure deleniti quidem minus voluptatibus repellendus error, excepturi quam, iste vitae tenetur fugiat possimus in. In iure cum facilis, saepe, libero accusantium.</p>
+
+			</div>
+
+			<div class="grid-item d-none d-lg-block" data-toggle="modal" data-target="#modalPlanes">
+				
+				<figure class="text-center">
+					
+					<h1 descripcion="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas suscipit quis eligendi voluptatibus dolore libero quasi delectus odit impedit optio eius corporis cumque numquam aliquid repudiandae quisquam dolor explicabo, totam.">PLAN ROMÁNTICO</h1>
+
+				</figure>
+
+				<img src="img/plan-romantico.png" class="img-fluid" width="100%">
+
+
+			</div>
+
+			<div class="grid-item d-none d-lg-block" data-toggle="modal" data-target="#modalPlanes">
+				
+				<figure class="text-center">
+					
+					<h1 descripcion="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat dicta fugiat nihil amet officiis, atque molestiae velit, quod repudiandae asperiores illum accusantium ullam, necessitatibus excepturi inventore, mollitia est vitae impedit.">PLAN LUNA DE MIEL</h1>
+
+				</figure>
+
+				<img src="img/luna-de-miel.png" class="img-fluid" width="100%">
+
+
+			</div>
+
+			<div class="grid-item d-none d-lg-block" data-toggle="modal" data-target="#modalPlanes">
+				
+				<figure class="text-center">
+					
+					<h1 descripcion="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt blanditiis nulla expedita nostrum vero. Laborum repudiandae numquam mollitia earum natus ut delectus quas, iste unde doloribus suscipit qui, voluptate perspiciatis.">PLAN AVENTURA</h1>
+
+				</figure>
+
+				<img src="img/plan-aventura.png" class="img-fluid" width="100%">
+
+			</div>
+
+			<div class="grid-item d-none d-lg-block" data-toggle="modal" data-target="#modalPlanes">
+				
+				<figure class="text-center">
+					
+					<h1 descripcion="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam quibusdam magni atque provident, quaerat libero harum possimus. Illum iure magni voluptate, quos amet! Ipsam, sit, sapiente. Cumque est officiis in!">PLAN SPA</h1>
+
+				</figure>
+
+				<img src="img/plan-spa.png" class="img-fluid" width="100%">
+
+			</div>
+			
+		</div>
+
+	</div>
+
+</div>
+
+<!--=====================================
+HABITACIONES
+======================================-->
+
+<div class="habitaciones container-fluid bg-light" id="habitaciones">
+	
+	<div class="container">
+
+		<h1 class="pt-4 text-center">HABITACIONES</h1>
+
+		<div class="row p-4 text-center">
+			
+			<div class="col-12 col-lg-4 pb-3 px-0 px-lg-3">
+
+				<a href="habitaciones.html">
+					
+					<figure class="text-center">
+						
+						<img src="img/habitacion01.png" class="img-fluid" width="100%">
+
+						<p class="small py-4 mb-0">Lorem ipsum dolor sit amet</p>
+
+						<h3 class="py-2 text-gray-dark mb-0">DESDE $300 USD</h3>
+
+						<h5 class="py-2 text-gray-dark border">Ver detalles <i class="fas fa-chevron-right ml-2"></i></h5>
+						
+						<h1 class="text-white p-3 mx-auto w-50 lead" style="background:#847059">SUITE</h1>
+
+					</figure>
+
+				</a>
+
+			</div>
+
+			<div class="col-12 col-lg-4 pb-3 px-0 px-lg-3">
+
+				<a href="habitaciones.html">
+					
+					<figure class="text-center">
+						
+						<img src="img/habitacion02.png" class="img-fluid" width="100%">
+
+						<p class="small py-4 mb-0">Lorem ipsum dolor sit amet</p>
+
+						<h3 class="py-2 text-gray-dark mb-0">DESDE $200 USD</h3>
+
+						<h5 class="py-2 text-gray-dark border">Ver detalles <i class="fas fa-chevron-right ml-2"></i></h5>
+						
+						<h1 class="text-white p-3 mx-auto w-50 lead" style="background:#197DB1">ESPECIAL</h1>
+
+					</figure>
+
+				</a>
+
+			</div>
+
+			<div class="col-12 col-lg-4 pb-3 px-0 px-lg-3">
+
+				<a href="habitaciones.html">
+					
+					<figure class="text-center">
+						
+						<img src="img/habitacion03.png" class="img-fluid" width="100%">
+
+						<p class="small py-4 mb-0">Lorem ipsum dolor sit amet</p>
+
+						<h3 class="py-2 text-gray-dark mb-0">DESDE $150 USD</h3>
+
+						<h5 class="py-2 text-gray-dark border">Ver detalles <i class="fas fa-chevron-right ml-2"></i></h5>
+						
+						<h1 class="text-white p-3 mx-auto w-50 lead" style="background:#2F7D84">STANDAR</h1>
+
+					</figure>
+
+				</a>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<!--=====================================
+PLANES MÓVIL
+======================================-->
+
+<div class="d-block d-lg-none planesMovil jd-slider bg-white" id="planesMovil">
+
+	<h1 class="text-center py-3">PLANES</h1>
+
+	 <div class="slide-inner">
+	 	
+		 <ul class="slide-area">
+		 	
+			<li>
+				
+				<a href="#modalPlanes" data-toggle="modal" descripcion="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas suscipit quis eligendi voluptatibus dolore libero quasi delectus odit impedit optio eius corporis cumque numquam aliquid repudiandae quisquam dolor explicabo, totam.">
+					
+					<img src="img/plan-romantico.png">
+					<h6 class="py-2 text-center">ROMÁNTICO</h6>
+
+				</a>
+
+			</li>
+
+			<li>
+				
+				<a href="#modalPlanes" data-toggle="modal" descripcion="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat dicta fugiat nihil amet officiis, atque molestiae velit, quod repudiandae asperiores illum accusantium ullam, necessitatibus excepturi inventore, mollitia est vitae impedit.">
+                	<img src="img/luna-de-miel.png">
+                	<h6 class="py-2 text-center">LUNA DE MIEL</h6>
+                </a>
+
+			</li>
+
+			<li>
+				
+			  	<a href="#modalPlanes" data-toggle="modal" descripcion="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt blanditiis nulla expedita nostrum vero. Laborum repudiandae numquam mollitia earum natus ut delectus quas, iste unde doloribus suscipit qui, voluptate perspiciatis.">
+                	<img src="img/plan-aventura.png">
+                	<h6 class="py-2 text-center">AVENTURA</h6>
+                </a>
+
+			</li>
+
+			<li>
+				
+			  <a href="#modalPlanes" data-toggle="modal" descripcion="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam quibusdam magni atque provident, quaerat libero harum possimus. Illum iure magni voluptate, quos amet! Ipsam, sit, sapiente. Cumque est officiis in!">
+                	<img src="img/plan-spa.png">
+                	<h6 class="py-2 text-center">SPA</h6>
+                </a>
+
+			</li>
+
+
+		 </ul>
+
+	 	<a class="prev" href="#">
+            <i class="fas fa-angle-left text-muted"></i>
+        </a>
+
+        <a class="next" href="#">
+            <i class="fas fa-angle-right text-muted"></i>
+        </a>
+
+ 	</div>
+
+  	<div class="controller">
+
+        <div class="indicate-area"></div>
+
+    </div>
+			   
+</div>
+
+<!--=====================================
+RECORRIDO POR EL PUEBLO
+======================================-->
+
+<div class="recorridoPueblo container-fluid bg-white pb-5" id="pueblo">
+	
+	<div class="container">
+
+		<h1 class="pt-5 text-center">RECORRIDO POR EL PUEBLO</h1>	
+
+			<div class="jd-slider slidePueblo">
+				
+				<div class="slide-inner">
+					
+					<ul class="slide-area">
+
+						<li>
+						
+							<div class="grid-container pt-4 pb-1 pb-lg-3 px-0 px-lg-5">
+				
+								<div class="grid-item">
+									
+									<img src="img/pueblo01a.png" class="img-fluid" width="100%">
+
+								</div>
+
+								<div class="grid-item">
+									
+									<h1 class="mt-4 mb-0 my-lg-2">LOREM IPSUM</h1>
+
+									<p class="small p-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo velit quis iusto magnam cupiditate dolorum repudiandae tempore cum minus eos a iure, officiis, eius, consequuntur unde nulla, enim quibusdam beatae.</p>
+
+								</div>
+
+								<div class="grid-item d-none d-lg-block">
+									
+									<img src="img/pueblo01b.png" class="img-fluid" width="100%">
+
+								</div>
+								
+							</div>
+
+						</li>
+
+						<li>
+						
+							<div class="grid-container pt-4 pb-1 pb-lg-3 px-0 px-lg-5">
+				
+								<div class="grid-item">
+									
+									<img src="img/pueblo02a.png" class="img-fluid" width="100%">
+
+								</div>
+
+								<div class="grid-item">
+									
+									<h1 class="mt-4 mb-0 my-lg-2">LOREM IPSUM</h1>
+
+									<p class="small p-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo velit quis iusto magnam cupiditate dolorum repudiandae tempore cum minus eos a iure, officiis, eius, consequuntur unde nulla, enim quibusdam beatae.</p>
+
+								</div>
+
+								<div class="grid-item d-none d-lg-block">
+									
+									<img src="img/pueblo02b.png" class="img-fluid" width="100%">
+
+								</div>
+								
+							</div>
+
+						</li>	
+
+						<li>
+						
+							<div class="grid-container pt-4 pb-1 pb-lg-3 px-0 px-lg-5">
+				
+								<div class="grid-item">
+									
+									<img src="img/pueblo03a.png" class="img-fluid" width="100%">
+
+								</div>
+
+								<div class="grid-item">
+									
+									<h1 class="mt-4 mb-0 my-lg-2">LOREM IPSUM</h1>
+
+									<p class="small p-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo velit quis iusto magnam cupiditate dolorum repudiandae tempore cum minus eos a iure, officiis, eius, consequuntur unde nulla, enim quibusdam beatae.</p>
+
+								</div>
+
+								<div class="grid-item d-none d-lg-block">
+									
+									<img src="img/pueblo03b.png" class="img-fluid" width="100%">
+
+								</div>
+								
+							</div>
+
+						</li>			
+
+					</ul>
+
+				</div>
+
+				<a class="d-none d-md-block prev" href="#">
+	            	<i class="fas fa-angle-left fa-2x" style="color:#3E92BD"></i>
+		        </a>
+
+		        <a class="d-none d-md-block next" href="#">
+		            <i class="fas fa-angle-right fa-2x" style="color:#3E92BD"></i>
+		        </a>
+
+		        <div class="controller">
+		            <div class="indicate-area"></div>
+		        </div>
+
+			</div>	
+	
+	</div>
+
+</div>
+
+<!--=====================================
+RESTAURANTE
+======================================-->
+
+<div class="fondoRestaurante container-fluid">
+
+
+</div>
+
+<div class="restaurante container-fluid pt-5" id="restaurante">
+	
+	<div class="container">
+
+		<div class="grid-container">
+		
+			<div class="grid-item carta">
+				
+				<div class="row p-1 p-lg-5">
+					
+					<div class="col-6 col-md-4 text-center p-1">
+						
+						<img src="img/plato01.png" class="img-fluid w-50 rounded-circle">
+
+						<p class="py-2">Lorem ipsum dolor sit amet consectetur</p>
+
+					</div>
+
+					<div class="col-6 col-md-4 text-center p-1">
+						
+						<img src="img/plato02.png" class="img-fluid w-50 rounded-circle">
+
+						<p class="py-2">Lorem ipsum dolor sit amet consectetur</p>
+
+					</div>
+
+					<div class="col-6 col-md-4 text-center p-1">
+						
+						<img src="img/plato03.png" class="img-fluid w-50 rounded-circle">
+
+						<p class="py-2">Lorem ipsum dolor sit amet consectetur</p>	
+
+					</div>
+
+					<div class="col-6 col-md-4 text-center p-1">
+						
+						<img src="img/plato04.png" class="img-fluid w-50 rounded-circle">
+
+						<p class="py-2">Lorem ipsum dolor sit amet consectetur</p>			
+
+					</div>
+
+					<div class="col-6 col-md-4 text-center p-1">
+						
+						<img src="img/plato05.png" class="img-fluid w-50 rounded-circle">
+
+						<p class="py-2">Lorem ipsum dolor sit amet consectetur</p>
+
+					</div>
+
+					<div class="col-6 col-md-4 text-center p-1">
+						
+						<img src="img/plato06.png" class="img-fluid w-50 rounded-circle">
+
+						<p class="py-2">Lorem ipsum dolor sit amet consectetur</p>			
+
+					</div>
+
+					<div class="col-12 text-center d-block d-lg-none">
+					
+						<button class="btn btn-warning text-uppercase mb-5 volverCarta">Volver</button>
+
+					</div>
+					
+				</div>
+
+			</div>
+
+			<div class="grid-item bloqueRestaurante">
+				
+				<h1 class="mt-4 my-lg-5">RESTAURANTE</h1>
+
+				<p class="p-4 my-lg-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo beatae nemo, saepe iusto, voluptas fuga. Nesciunt tempora nobis quia, officia at corporis sint sunt saepe quod labore hic iusto totam.</p>
+
+				<button class="btn btn-warning text-uppercase mb-5 verCarta">Ver la carta</button>
+
+			</div>
+			
+		</div>		
+
+	</div>
+
+</div>
+
+<!--=====================================
+CONTÁCTENOS
+======================================-->
+
+<div class="contactenos container-fluid bg-white py-4" id="contactenos">
+	
+	<div class="container text-center">
+		
+		<h1 class="py-sm-4">CONTÁCTENOS</h1>
+
+		<form>
+
+			<div class="input-group input-group-lg">
+				
+				<input type="text" class="form-control mb-3 mr-2 form-control-lg" placeholder="Nombre">
+
+				<input type="text" class="form-control mb-3 ml-2 form-control-lg" placeholder="Apellido">
+
+			</div>
+
+			<div class="input-group input-group-lg">
+				
+				<input type="text" class="form-control mb-3 mr-2 form-control-lg" placeholder="Móvil">
+
+				<input type="text" class="form-control mb-3 ml-2 form-control-lg" placeholder="Correo Electrónico">
+
+			</div>
+
+			<textarea class="form-control" rows="6" placeholder="Escribe aquí tu mensaje"></textarea>
+
+			<input class="btn btn-dark my-4 btn-lg py-3 text-uppercase" value="Enviar">
+
+		</form>
+
+	</div>
+
+</div>
+
+<!--=====================================
+MAPA
+======================================-->
+<div class="mapa container-fluid bg-white p-0">
+	
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2181015083097!2d-75.16167268476889!3d6.2349559954867315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e441d2a2f90b049%3A0xe73c0a7060062903!2sHOTEL+PORTOBELO+GUATAPE!5e0!3m2!1ses!2sco!4v1544281019677" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+	<div class=" p-4 info"> 
+
+		<h3 class="mt-4"><strong>Visítanos</strong></h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+		<p>
+		Apple inc.<br>
+		Infinte Loop.<br>
+		Cupertino, CA 95014<br>
+		408-996-1010
+		</p>
+
+		<p class="pb-4">Email: info@apple.com<br>
+		Tel: 1-800-676-2775</p>
+
+	</div>	
+
+</div>
+
+<!--=====================================
+FOOTER
+======================================-->
+
+<footer class="container-fluid p-0">
+
+	<div class="grid-container">
+			
+		<div class="grid-item d-none d-lg-block pt-2"></div>
+
+		<div class="grid-item d-none d-lg-block pt-2">
+			
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat.</p>
+
+		</div>
+
+		<div class="grid-item pt-2">
+			
+			<ul class="py-1">
+
+				<li>
+					<a href="#" target="_blank"><i class="fab fa-facebook-f lead text-white float-left mx-3"></i></a>
+				</li>
+
+				<li>
+					<a href="#" target="_blank"><i class="fab fa-twitter lead text-white float-left mx-3"></i></a>
+				</li>
+
+				<li>
+					<a href="#" target="_blank"><i class="fab fa-youtube lead text-white float-left mx-3"></i></a>
+				</li>
+
+
+				<li>
+					<a href="#" target="_blank"><i class="fab fa-instagram lead text-white float-left mx-3"></i></a>
+				</li>	
+			
+			</ul>	
+
+		</div>
+
+	</div>
+
+</footer>
+
+<!--=====================================
+REDES SOCIALES MÓVIL
+======================================-->
+
+<ul class="redesMovil p-2 nav nav-justified">
+
+	<li class="nav-item">
+		<a href="#" target="_blank"><i class="fab fa-facebook-f lead text-white"></i></a>
+	</li>
+
+	<li class="nav-item">
+		<a href="#" target="_blank"><i class="fab fa-twitter lead text-white"></i></a>
+	</li>
+
+	<li class="nav-item">
+		<a href="#" target="_blank"><i class="fab fa-youtube lead text-white"></i></a>
+	</li>
+
+	<li class="nav-item">
+		<a href="#" target="_blank"><i class="fab fa-instagram lead text-white"></i></a>
+	</li>	
+
+</ul>	
+
+<!--=====================================
+VENTANA MODAL PLANES
+======================================-->
+
+<div class="modal" id="modalPlanes">
+	
+	 <div class="modal-dialog">
+			
+		<div class="modal-content">
+			
+	      	<div class="modal-header">
+	        	<h4 class="modal-title"></h4>
+	        	<button type="button" class="close" data-dismiss="modal">&times;</button>
+	      	</div>
+			
+	 		<div class="modal-body">
+       			
+       			<img src="" class="img-thumbnail">
+    			
+    			<p class="py-3"></p>
+       			
+       			<div class="text-center">
+        			<a href="habitaciones.html" class="btn btn-primary text-center">Separa tu habitación</a>
+        		</div>
+
+      		</div>
+
+  		 	<div class="modal-footer">
+        		<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+      		</div>
+
+		</div> 	
+
+	 </div>
+
+</div>
+
+<!--=====================================
+VENTANA MODAL INGRESO
+======================================-->
+
+<div class="modal" id="modalIngreso">
+
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+
+      <div class="modal-header bg-info text-white">
+        <h4 class="modal-title">Ingresar</h4>
+        <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+
+      	<!--=====================================
+		INGRESO CON REDES SOCIALES
+		======================================-->
+       
+      	<div class="d-flex">
+      		
+			<div class="px-2 flex-fill">
+
+				<p class="p-2 bg-primary text-center text-white">
+					<i class="fab fa-facebook"></i>
+					Ingreso con Facebook
+				</p>
+
+			</div>
+
+			<div class="px-2 flex-fill">
+
+				<p class="p-2 bg-danger text-center text-white">
+					<i class="fab fa-google"></i>
+					Ingreso con Google
+				</p>
+
+			</div>
+
+      	</div>
+
+      	<!--=====================================
+		INGRESO DIRECTO
+		======================================-->
+
+		<hr class="mt-0">
+
+		<form>
+
+			<div class="input-group mb-3">
+
+			    <div class="input-group-prepend">
+
+			      <span class="input-group-text">
+			      	
+			      	<i class="far fa-envelope"></i>
+
+			      </span>
+
+			    </div>
+
+			    <input type="email" class="form-control" placeholder="Email">
+
+		  	</div>
+
+		  	<div class="input-group mb-3">
+
+			    <div class="input-group-prepend">
+
+			      <span class="input-group-text">
+			      	
+					<i class="fas fa-unlock-alt"></i>
+
+			      </span>
+
+			    </div>
+
+			    <input type="password" class="form-control" placeholder="Contraseña">
+
+		  	</div>
+			
+
+			<input type="submit" class="btn btn-dark btn-block" value="Ingresar">
+
+		</form>
+
+      </div>
+
+
+      <div class="modal-footer">
+        
+		¿No tiene una cuenta registrada? | 
+
+		<strong>
+
+			<a href="#modalRegistro" data-toggle="modal" data-dismiss="modal">
+				Registrarse
+			</a>
+
+		</strong>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!--=====================================
+VENTANA MODAL REGISTRO
+======================================-->
+
+<div class="modal" id="modalRegistro">
+
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+
+      <div class="modal-header bg-info text-white">
+        <h4 class="modal-title">Registarse</h4>
+        <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+
+      	<!--=====================================
+		INGRESO CON REDES SOCIALES
+		======================================-->
+       
+      	<div class="d-flex">
+      		
+			<div class="px-2 flex-fill">
+
+				<p class="p-2 bg-primary text-center text-white">
+					<i class="fab fa-facebook"></i>
+					Ingreso con Facebook
+				</p>
+
+			</div>
+
+			<div class="px-2 flex-fill">
+
+				<p class="p-2 bg-danger text-center text-white">
+					<i class="fab fa-google"></i>
+					Ingreso con Google
+				</p>
+
+			</div>
+
+      	</div>
+
+      	<!--=====================================
+		REGISTRO DIRECTO
+		======================================-->
+
+		<hr class="mt-0">
+
+		<form>
+
+			<div class="input-group mb-3">
+
+			    <div class="input-group-prepend">
+
+			      <span class="input-group-text">
+			      	
+			      	<i class="far fa-user"></i>
+
+			      </span>
+
+			    </div>
+
+			    <input type="text" class="form-control" placeholder="Nombre">
+
+		  	</div>
+
+
+			<div class="input-group mb-3">
+
+			    <div class="input-group-prepend">
+
+			      <span class="input-group-text">
+			      	
+			      	<i class="far fa-envelope"></i>
+
+			      </span>
+
+			    </div>
+
+			    <input type="email" class="form-control" placeholder="Email">
+
+		  	</div>
+
+		  	<div class="input-group mb-3">
+
+			    <div class="input-group-prepend">
+
+			      <span class="input-group-text">
+			      	
+					<i class="fas fa-unlock-alt"></i>
+
+			      </span>
+
+			    </div>
+
+			    <input type="password" class="form-control" placeholder="Contraseña">
+
+		  	</div>
+			
+
+			<input type="submit" class="btn btn-dark btn-block" value="Registrarse">
+
+		</form>
+
+      </div>
+
+
+      <div class="modal-footer">
+        
+		¿Ya tienes una cuenta registrada? | 
+
+		<strong>
+
+			<a href="#modalIngreso" data-toggle="modal" data-dismiss="modal">
+				Ingresar
+			</a>
+
+		</strong>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="js/script.js"></script>
+	
+</body>
+</html>
