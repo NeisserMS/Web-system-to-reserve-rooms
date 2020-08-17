@@ -1,0 +1,13 @@
+{
+    "name": "neisser/reservas-hotel",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Neisser Sanchez",
+            "email": "nmorenos2@upao.edu.pe"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.1"
+    }
+}

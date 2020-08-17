@@ -1,5 +1,15 @@
 <?php
 
+require _DIR_ . '/vendor/autoload.php';
+
+
+$baseDir = _DIR_ . '/';
+$dotenv = Dotenv\Dotenv::createImmutable($baseDir);
+$envFile = $baseDir . '.env';
+if (file_exists($envFile)) {
+    $dotenv->load();
+}
+
 require_once "controladores/plantilla.controlador.php";
 require_once "controladores/ruta.controlador.php";
 
