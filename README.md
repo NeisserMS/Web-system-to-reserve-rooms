@@ -93,5 +93,5 @@ And then to make the data dynamic we have created the database in MySQL to bring
 ![img2](v4.png)
 ![img3](web2.png)
 
-> The project was not made by me, I bought it for a university course and thanks to it I have learned a lot along the way, I will share them if it helps.
+
 
